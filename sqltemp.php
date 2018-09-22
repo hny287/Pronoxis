@@ -45,4 +45,5 @@ if ($res = mysqli_query($link, $sql)) {
 e
 
 $query = mysql_query("SELECT * FROM users WHERE user='%s' AND password='%s'",mysql_real_escape_string($user),mysql_real_escape_string($password));
+
 ?>
