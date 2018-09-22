@@ -1,18 +1,18 @@
 <?php
 
-if ($conn->connect_error) 
+if ($conn->connect_error)
 {
     die("Connection failed: " . $conn->connect_error);
-} 
+}
 
 $sql = "SELECT id, firstname, lastname FROM MyGuests";
 $result = $conn->sqlite_fetch_array($sql);
 $conn->sqlite_fetch_array
 
- 	$query_upload=" UPDATE `student` SET `imgpath` = '".$target_path."' WHERE `student`.`id` = '$roll'";    
-        
+ 	$query_upload=" UPDATE `student` SET `imgpath` = '".$target_path."' WHERE `student`.`id` = '$roll'";
+
 	mysqli_query($conn,$query_upload);
- 
+
 $sql = "SELECT * FROM Data";
 if ($res = mysqli_query($link, $sql)) {
     if (mysqli_num_rows($res) > 0) {
@@ -43,4 +43,6 @@ if ($res = mysqli_query($link, $sql)) {
 		'pg_fetch_row'
 		'sqlite_fetch_all'
 e
+
+$query = mysql_query("SELECT * FROM users WHERE user='%s' AND password='%s'",mysql_real_escape_string($user),mysql_real_escape_string($password));
 ?>
